@@ -1,0 +1,157 @@
+                                                    ARTIFICIAL INTELLIGENCE 
+
+Farm Academy
+An AI-powered HACKATH that guides farmers with crop selection, fertilizer usage, and disease diagnosis, while providing learning resources for modern farming practices.
+RS 1800
+Key Features:
+•	AI crop & fertilizer recommendations
+•	Disease detection with treatment suggestions
+•	Farming tips & best practices library
+•	Multilingual farmer support
+What’s Included:
+•	Farmer dashboard with alerts
+•	Recommendation & diagnosis modules
+•	Educational content section
+
+Sign Language Predictor
+An AI-powered system that recognizes and translates sign language gestures into text in real time using computer vision and deep learning. The application supports both live webcam input and uploaded images for detection.
+Rs 1500
+Key Features:
+1.	Real-Time Detection – Recognizes signs instantly via webcam.
+2.	Common Phrase Recognition – Maps gestures to frequently used phrases.
+3.	Image Upload Detection – Processes uploaded images for sign prediction.
+4.	Interactive UI – Responsive, user-friendly interface.
+5.	Sentence Builder – Combines detected signs into sentences.
+What’s Included:
+•	Real-time sign recognition module
+•	Image-based sign detection tool
+•	Phrase mapping & sentence-building system
+•	Modern web-based UI for interaction
+
+Movie Recommendation System
+An AI-powered platform that recommends movies based on user preferences, viewing history, or a described plot. Supports keyword search, genre-based discovery, and similar movie suggestions with detailed movie information.
+RS 1500
+Key Features:
+1.	Smart Recommendations – Suggests similar movies based on your choice.
+2.	Plot-based Search – Describe a movie to find the closest match.
+3.	Detailed Movie Info – Ratings, overview, cast, release date, budget, and revenue.
+4.	Genre Filtering – Browse and discover by movie genres.
+5.	Interactive UI – Sleek, responsive interface for seamless browsing.
+6.	Multi-source Availability – Shows where the movie can be streamed or watched.
+What’s Included:
+•	AI-powered recommendation engine
+•	Search by title, keywords, or plot description
+•	Movie details with posters and metadata
+•	Similar movie suggestions module
+
+Learnable Ai: Ai powered education tool
+Rs 2000
+Key Features:
+1.	Content Summarization – Condenses complex material into clear, concise summaries.
+2.	Smart Focus Mode – Highlights key points, explains terms, and adds annotations.
+3.	Learning Path Generator – Creates step-by-step study plans with time estimates and resource recommendations.
+4.	Image-to-Content – Extracts text, generates summaries, and provides image descriptions and analysis.
+5.	History & Organization – Search past content, filter by type, and revisit materials anytime.
+6.	Export & Share – One-click copy, download in text/PDF, or share via link/email.
+What’s Included:
+•	AI-driven accessibility tools for diverse learning needs
+•	Voice navigation and speech recognition support
+•	Adaptive content delivery for various subjects
+•	Study material organization and quick search functionality
+
+
+Multimodal Creative Writing Assistant
+AI tool for writers that uses text, image, and audio to inspire, co-write, and refine stories.
+RS 1800
+Key Features
+•	Idea generation & style adaptation
+•	Visual & audio-based inspiration
+•	Real-time co-writing and editing
+•	Feedback for clarity and flow
+Includes
+•	Multimodal input support
+•	Style transfer & rewriting tools
+•	Export to TXT, DOCX, PDF
+
+
+Traffic Route Prediction using Machine Learning
+AI-based system that predicts optimal travel routes by analyzing traffic patterns, weather, and historical data.
+rs 1800
+Key Features
+•	Real-time traffic analysis
+•	Route optimization & ETA prediction
+•	Congestion & incident alerts
+•	Weather-aware routing
+Includes
+•	Data from maps & traffic APIs
+•	Predictive ML models
+•	Export routes & share options
+
+
+
+
+
+Neural Architecture to Reduce AI Footprints
+Lightweight and energy-efficient AI model architecture designed to minimize computational cost, memory usage, and carbon footprint while maintaining high performance.
+Rs 1800
+Key Features
+•	Low-latency inference
+•	Reduced parameter count
+•	Energy-efficient computation
+•	Model compression & pruning
+•	Edge-device deployment ready
+•	Scalable across platforms
+Includes
+•	Optimized neural network design
+•	Performance vs. footprint analysis
+•	Deployment toolkit for edge & cloud
+
+cybersecurity
+
+
+ZK-Shield – Privacy-First Fraud Prevention for Retail
+Rs 2000
+Objective
+Develop a frictionless, real-time fraud prevention system that verifies users with Zero-Knowledge Proofs (ZKPs) and AI-based behavioral authentication — ensuring no personal data leaks.
+Key Features
+•	Behavioral Analytics – AI tracks biometrics like scroll speed, typing style, click delay
+•	ZKP Trust Engine – Verifies legitimacy without exposing data
+•	Fraud Detection – Flags anomalies before damage occurs
+•	Loyalty & Return Protection – Confirms same-user activity without revealing ID
+•	Real-Time Trust Score – Dynamic session handling (0–100 scale)
+•	Wallet-Based Login – Web3 identity with ZK-attestation
+Key Outcomes
+•	Reduce account takeovers, bot fraud, and return abuse
+•	Build lasting customer trust through zero-data-leak policy
+•	Scalable plug-and-play integration for global retail platforms
+
+AI Phishing Detection
+Rs 1500
+Objective:
+Develop a machine learning system to detect phishing websites by analyzing both phishing and legitimate URLs. Features are extracted from domains, HTML content, and address bars to train and compare multiple ML and deep learning models.
+Key Features:
+•	URL and content-based feature extraction
+•	Comparison of models like Gradient Boosting, CatBoost, MLP, Random Forest, SVM, etc.
+•	Binary classification: Phishing or Legitimate
+•	Web interface for real-time URL checks
+Best Model Performance:
+•	Gradient Boosting Classifier – 97.4% accuracy, 0.977 F1-score
+•	Most impactful features: HTTPS usage, Anchor URL, Website Traffic
+
+Cryptography Chain
+Rs 1500
+A lightweight, privacy-first communication platform that uses advanced encryption algorithms to secure text, voice, and file sharing. Designed to protect sensitive data from cyber threats, it ensures confidentiality, authenticity, and integrity without sacrificing performance.
+✨ Key Features:
+•	End-to-End Encryption (AES, RSA, ECC, Post-Quantum)
+•	Secure Key Generation & Exchange
+•	Digital Signatures for authenticity
+•	Encrypted file transfer with integrity checks
+🎯 Outcomes:
+•	Strong protection against interception and tampering
+•	Scalable for personal, corporate, or government use
+
+
+Quantum Coin Toss Simulator
+Rs 1200
+A Python-based simulator that uses quantum principles to model coin tosses where outcomes exist in superposition until measured. Users can run single or multi-qubit experiments, visualize probability distributions, and explore Bloch sphere representations. Designed as an interactive way to learn concepts like superposition, measurement, and quantum circuits.
+Key Outcomes: Understand quantum mechanics basics, observe probabilistic results, and gain hands-on experience with quantum state visualization.

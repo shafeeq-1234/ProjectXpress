@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Xpress - Your Future Projects Start Here</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'neon-cyan': '#00D4FF',
+                        'neon-pink': '#FF0080',
+                        'neon-purple': '#8B5CF6',
+                        'neon-green': '#00FF88',
+                        'dark-bg': '#0A0A0B',
+                        'dark-surface': '#1A1A1F',
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                        'rotate-3d': 'rotate3d 10s linear infinite',
+                        'morph': 'morph 8s ease-in-out infinite',
+                        'slide-up': 'slideUp 0.6s ease-out forwards',
+                        'fade-in': 'fadeIn 1s ease-out forwards',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotateX(0deg) rotateY(0deg); }
+            50% { transform: translateY(-20px) rotateX(10deg) rotateY(5deg); }
+        }
+        @keyframes glow {
+            from { box-shadow: 0 0 20px #00D4FF, 0 0 40px #00D4FF, 0 0 60px #00D4FF; }
+            to { box-shadow: 0 0 40px #FF0080, 0 0 60px #FF0080, 0 0 80px #FF0080; }
+        }
+        @keyframes rotate3d {
+            0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+            33% { transform: rotateX(360deg) rotateY(0deg) rotateZ(0deg); }
+            66% { transform: rotateX(360deg) rotateY(360deg) rotateZ(0deg); }
+            100% { transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg); }
+        }
+        @keyframes morph {
+            0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+            50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+        }
+        @keyframes slideUp {
+            from { transform: translateY(100px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .perspective-1000 { perspective: 1000px; }
+        .preserve-3d { transform-style: preserve-3d; }
+        .backface-hidden { backface-visibility: hidden; }
+        
+        .card-3d {
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        .card-3d:hover {
+            transform: rotateY(180deg) scale(1.05);
+        }
+        
+        .morphing-bg {
+            background: linear-gradient(45deg, #00D4FF, #FF0080, #8B5CF6, #00FF88);
+            background-size: 400% 400%;
+            animation: morph 8s ease-in-out infinite;
+        }
+        
+        .text-3d {
+            text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+        }
+        
+        .neon-border {
+            border: 2px solid transparent;
+            background: linear-gradient(#0A0A0B, #0A0A0B) padding-box,
+                        linear-gradient(45deg, #00D4FF, #FF0080) border-box;
+        }
+        
+        .floating-particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #00D4FF;
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+            box-shadow: 0 0 10px #00D4FF;
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .project-card {
+            perspective: 1000px;
+            height: 300px;
+        }
+        
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+        
+        .project-card:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+        
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border-radius: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1.5rem;
+        }
+        
+        .card-back {
+            transform: rotateY(180deg);
+        }
+        
+        .stats-counter {
+            transition: all 0.5s ease;
+        }
+        
+        .stats-counter:hover {
+            transform: scale(1.1) rotateY(10deg);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .card-3d:hover {
+                transform: scale(1.02);
+            }
+            .project-card:hover .card-inner {
+                transform: none;
+            }
+            .hero-3d {
+                transform: none !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-dark-bg text-white font-inter overflow-x-hidden">
+    <!-- Floating Particles Background -->
+    <div class="fixed inset-0 pointer-events-none z-0">
+        <div class="floating-particle" style="top: 10%; left: 10%; animation-delay: 0s;"></div>
+        <div class="floating-particle" style="top: 20%; left: 80%; animation-delay: 2s;"></div>
+        <div class="floating-particle" style="top: 70%; left: 20%; animation-delay: 4s;"></div>
+        <div class="floating-particle" style="top: 80%; left: 70%; animation-delay: 1s;"></div>
+        <div class="floating-particle" style="top: 50%; left: 50%; animation-delay: 3s;"></div>
+    </div>
+
+    <!-- @COMPONENT: Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-effect">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold font-poppins text-3d text-neon-cyan">
+                    Project Xpress
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-neon-cyan transition-colors duration-300 relative group">
+                        Home
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-neon-cyan transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#about" class="hover:text-neon-pink transition-colors duration-300 relative group">
+                        About Us
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-neon-pink transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#projects" class="hover:text-neon-purple transition-colors duration-300 relative group">
+                        Projects
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-neon-purple transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                    <a href="#order" class="hover:text-neon-green transition-colors duration-300 relative group">
+                        Order
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-neon-green transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-neon-cyan hover:text-neon-pink transition-colors duration-300">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- @END_COMPONENT: Navigation -->
+
+    <!-- @COMPONENT: Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+        <!-- 3D Morphing Background -->
+        <div class="absolute inset-0 opacity-20">
+            <div class="morphing-bg w-96 h-96 absolute top-10 left-10 rounded-full blur-3xl"></div>
+            <div class="morphing-bg w-64 h-64 absolute bottom-20 right-20 rounded-full blur-2xl" style="animation-delay: -4s;"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <div class="hero-3d animate-slide-up">
+                <h1 class="text-6xl md:text-8xl font-bold font-poppins mb-8 text-3d">
+                    <span class="text-neon-cyan">We have successfully</span><br>
+                    <span class="text-neon-pink">delivered 100+</span><br>
+                    <span class="text-neon-green">projects within</span><br>
+                    <span class="text-neon-purple">3 months</span>
+                </h1>
+                
+                <p class="text-xl md:text-2xl mb-12 text-gray-300 max-w-3xl mx-auto animate-fade-in" style="animation-delay: 0.3s;">
+                    Ready-made and custom college projects delivered with precision and excellence
+                </p>
+                
+                <!-- Delivery Modes -->
+                <div class="grid md:grid-cols-2 gap-8 mb-16 max-w-4xl mx-auto">
+                    <div class="glass-effect p-8 rounded-2xl neon-border card-3d animate-fade-in" style="animation-delay: 0.6s;">
+                        <i class="fas fa-desktop text-4xl text-neon-cyan mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-2 text-neon-cyan">Online Delivery</h3>
+                        <p class="text-gray-300">Delivered via AnyDesk for seamless remote access</p>
+                    </div>
+                    
+                    <div class="glass-effect p-8 rounded-2xl neon-border card-3d animate-fade-in" style="animation-delay: 0.9s;">
+                        <i class="fas fa-map-marker-alt text-4xl text-neon-pink mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-2 text-neon-pink">Offline for SRMIST (KTR)</h3>
+                        <p class="text-gray-300">Expanding soon to other colleges</p>
+                    </div>
+                </div>
+                
+                <!-- CTA Button -->
+                <a href="#projects" class="inline-block bg-gradient-to-r from-neon-cyan to-neon-purple text-black font-bold py-4 px-12 rounded-full text-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl animate-glow animate-fade-in" style="animation-delay: 1.2s;">
+                    Explore Projects
+                </a>
+            </div>
+        </div>
+        
+        <!-- Floating Academic Icons -->
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="animate-float absolute top-1/4 left-1/4 text-neon-cyan opacity-30" style="animation-delay: 0s;">
+                <i class="fas fa-laptop-code text-6xl"></i>
+            </div>
+            <div class="animate-float absolute top-1/3 right-1/4 text-neon-pink opacity-30" style="animation-delay: 2s;">
+                <i class="fas fa-database text-5xl"></i>
+            </div>
+            <div class="animate-float absolute bottom-1/3 left-1/3 text-neon-green opacity-30" style="animation-delay: 4s;">
+                <i class="fas fa-brain text-4xl"></i>
+            </div>
+            <div class="animate-float absolute bottom-1/4 right-1/3 text-neon-purple opacity-30" style="animation-delay: 1s;">
+                <i class="fas fa-shield-alt text-5xl"></i>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Hero Section -->
+
+    <!-- @COMPONENT: Stats Section -->
+    <section class="py-20 relative">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center stats-counter">
+                    <div class="text-5xl font-bold text-neon-cyan mb-2" data-bind="stats.projects">100+</div>
+                    <div class="text-gray-400">Projects Delivered</div>
+                </div>
+                <div class="text-center stats-counter">
+                    <div class="text-5xl font-bold text-neon-pink mb-2" data-bind="stats.months">3</div>
+                    <div class="text-gray-400">Months Record</div>
+                </div>
+                <div class="text-center stats-counter">
+                    <div class="text-5xl font-bold text-neon-green mb-2" data-bind="stats.satisfaction">98%</div>
+                    <div class="text-gray-400">Client Satisfaction</div>
+                </div>
+                <div class="text-center stats-counter">
+                    <div class="text-5xl font-bold text-neon-purple mb-2" data-bind="stats.response">24h</div>
+                    <div class="text-gray-400">Response Time</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Stats Section -->
+
+    <!-- @COMPONENT: About Section -->
+    <section id="about" class="py-20 relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold font-poppins mb-6 text-3d">
+                    Meet Our <span class="text-neon-cyan">Founders</span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Passionate innovators dedicated to delivering exceptional project solutions
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                <!-- Founder 1: Shafeeq -->
+                <div class="glass-effect p-8 rounded-2xl neon-border card-3d text-center">
+                    <!-- Professional photo placeholder for Shafeeq -->
+                    <div class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=500" 
+                             alt="Shafeeq - Co-Founder" 
+                             class="w-full h-full object-cover transform transition-transform duration-300 hover:scale-110"
+                             data-mock="true">
+                    </div>
+                    <h3 class="text-3xl font-bold mb-2 text-neon-cyan">Shafeeq</h3>
+                    <p class="text-xl text-neon-pink mb-6">Co-Founder</p>
+                    <p class="text-gray-300 mb-8">Specialized in full-stack development and project architecture with expertise in cutting-edge technologies.</p>
+                    
+                    <div class="flex justify-center space-x-6">
+                        <a href="#" class="text-neon-cyan hover:text-neon-pink transition-colors duration-300 transform hover:scale-125">
+                            <i class="fab fa-linkedin text-3xl"></i>
+                        </a>
+                        <a href="#" class="text-neon-cyan hover:text-neon-pink transition-colors duration-300 transform hover:scale-125">
+                            <i class="fab fa-instagram text-3xl"></i>
+                        </a>
+                        <a href="#" class="text-neon-cyan hover:text-neon-pink transition-colors duration-300 transform hover:scale-125">
+                            <i class="fab fa-github text-3xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Founder 2: Aadarsh -->
+                <div class="glass-effect p-8 rounded-2xl neon-border card-3d text-center">
+                    <!-- Professional photo placeholder for Aadarsh -->
+                    <div class="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=500" 
+                             alt="Aadarsh - Co-Founder" 
+                             class="w-full h-full object-cover transform transition-transform duration-300 hover:scale-110"
+                             data-mock="true">
+                    </div>
+                    <h3 class="text-3xl font-bold mb-2 text-neon-pink">Aadarsh</h3>
+                    <p class="text-xl text-neon-cyan mb-6">Co-Founder</p>
+                    <p class="text-gray-300 mb-8">Expert in AI/ML, data science, and innovative project solutions with a passion for emerging technologies.</p>
+                    
+                    <div class="flex justify-center space-x-6">
+                        <a href="#" class="text-neon-pink hover:text-neon-cyan transition-colors duration-300 transform hover:scale-125">
+                            <i class="fab fa-linkedin text-3xl"></i>
+                        </a>
+                        <a href="#" class="text-neon-pink hover:text-neon-cyan transition-colors duration-300 transform hover:scale-125">
+                            <i class="fab fa-instagram text-3xl"></i>
+                        </a>
+                        <a href="#" class="text-neon-pink hover:text-neon-cyan transition-colors duration-300 transform hover:scale-125">
+                            <i class="fab fa-github text-3xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: About Section -->
+
+    <!-- @COMPONENT: Projects Section -->
+    <section id="projects" class="py-20 relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold font-poppins mb-6 text-3d">
+                    Our <span class="text-neon-purple">Project Categories</span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Comprehensive solutions across multiple domains
+                </p>
+            </div>
+            
+            <!-- Project Categories -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+                <!-- @MAP: categories.map(category => ( -->
+                <div class="glass-effect p-6 rounded-xl text-center card-3d hover:bg-opacity-20">
+                    <i class="fas fa-database text-3xl text-neon-cyan mb-3"></i>
+                    <h3 class="font-bold text-neon-cyan" data-mock="true">DBMS</h3>
+                </div>
+                <div class="glass-effect p-6 rounded-xl text-center card-3d hover:bg-opacity-20">
+                    <i class="fas fa-brain text-3xl text-neon-pink mb-3"></i>
+                    <h3 class="font-bold text-neon-pink" data-mock="true">AI/ML</h3>
+                </div>
+                <div class="glass-effect p-6 rounded-xl text-center card-3d hover:bg-opacity-20">
+                    <i class="fas fa-microchip text-3xl text-neon-green mb-3"></i>
+                    <h3 class="font-bold text-neon-green" data-mock="true">Hardware</h3>
+                </div>
+                <div class="glass-effect p-6 rounded-xl text-center card-3d hover:bg-opacity-20">
+                    <i class="fab fa-java text-3xl text-neon-purple mb-3"></i>
+                    <h3 class="font-bold text-neon-purple" data-mock="true">Java</h3>
+                </div>
+                <div class="glass-effect p-6 rounded-xl text-center card-3d hover:bg-opacity-20">
+                    <i class="fab fa-python text-3xl text-neon-cyan mb-3"></i>
+                    <h3 class="font-bold text-neon-cyan" data-mock="true">Python</h3>
+                </div>
+                <div class="glass-effect p-6 rounded-xl text-center card-3d hover:bg-opacity-20">
+                    <i class="fas fa-dna text-3xl text-neon-pink mb-3"></i>
+                    <h3 class="font-bold text-neon-pink" data-mock="true">Bio</h3>
+                </div>
+                <div class="glass-effect p-6 rounded-xl text-center card-3d hover:bg-opacity-20">
+                    <i class="fas fa-shield-alt text-3xl text-neon-green mb-3"></i>
+                    <h3 class="font-bold text-neon-green" data-mock="true">Cyber Security</h3>
+                </div>
+                <div class="glass-effect p-6 rounded-xl text-center card-3d hover:bg-opacity-20">
+                    <i class="fas fa-image text-3xl text-neon-purple mb-3"></i>
+                    <h3 class="font-bold text-neon-purple" data-mock="true">DIP</h3>
+                </div>
+                <!-- @END_MAP )) -->
+            </div>
+            
+            <!-- Sample Project Cards with 3D Flip -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- @MAP: projects.map(project => ( -->
+                <div class="project-card" data-mock="true">
+                    <div class="card-inner">
+                        <div class="card-front glass-effect neon-border">
+                            <i class="fas fa-laptop-code text-5xl text-neon-cyan mb-4"></i>
+                            <h3 class="text-2xl font-bold mb-4 text-neon-cyan">E-Commerce Platform</h3>
+                            <p class="text-3xl font-bold text-neon-pink mb-4">₹2,999</p>
+                            <button class="bg-neon-cyan text-black px-6 py-3 rounded-full font-semibold hover:bg-neon-pink transition-colors duration-300">
+                                View Details
+                            </button>
+                        </div>
+                        <div class="card-back glass-effect neon-border">
+                            <h3 class="text-2xl font-bold mb-4 text-neon-cyan">Project Details</h3>
+                            <ul class="text-left space-y-2 text-gray-300">
+                                <li>• Full-stack development</li>
+                                <li>• Payment integration</li>
+                                <li>• Admin dashboard</li>
+                                <li>• Mobile responsive</li>
+                                <li>• Database design</li>
+                            </ul>
+                            <div class="mt-6">
+                                <span class="text-neon-pink font-bold">Delivery: 5-7 days</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-mock="true">
+                    <div class="card-inner">
+                        <div class="card-front glass-effect neon-border">
+                            <i class="fas fa-brain text-5xl text-neon-pink mb-4"></i>
+                            <h3 class="text-2xl font-bold mb-4 text-neon-pink">ML Prediction System</h3>
+                            <p class="text-3xl font-bold text-neon-green mb-4">₹3,499</p>
+                            <button class="bg-neon-pink text-black px-6 py-3 rounded-full font-semibold hover:bg-neon-green transition-colors duration-300">
+                                View Details
+                            </button>
+                        </div>
+                        <div class="card-back glass-effect neon-border">
+                            <h3 class="text-2xl font-bold mb-4 text-neon-pink">Project Details</h3>
+                            <ul class="text-left space-y-2 text-gray-300">
+                                <li>• Data preprocessing</li>
+                                <li>• Model training</li>
+                                <li>• Web interface</li>
+                                <li>• Visualization</li>
+                                <li>• Documentation</li>
+                            </ul>
+                            <div class="mt-6">
+                                <span class="text-neon-green font-bold">Delivery: 7-10 days</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-mock="true">
+                    <div class="card-inner">
+                        <div class="card-front glass-effect neon-border">
+                            <i class="fas fa-shield-alt text-5xl text-neon-green mb-4"></i>
+                            <h3 class="text-2xl font-bold mb-4 text-neon-green">Security Scanner</h3>
+                            <p class="text-3xl font-bold text-neon-purple mb-4">₹2,499</p>
+                            <button class="bg-neon-green text-black px-6 py-3 rounded-full font-semibold hover:bg-neon-purple transition-colors duration-300">
+                                View Details
+                            </button>
+                        </div>
+                        <div class="card-back glass-effect neon-border">
+                            <h3 class="text-2xl font-bold mb-4 text-neon-green">Project Details</h3>
+                            <ul class="text-left space-y-2 text-gray-300">
+                                <li>• Vulnerability scanning</li>
+                                <li>• Report generation</li>
+                                <li>• Real-time monitoring</li>
+                                <li>• User authentication</li>
+                                <li>• Security protocols</li>
+                            </ul>
+                            <div class="mt-6">
+                                <span class="text-neon-purple font-bold">Delivery: 4-6 days</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- @END_MAP )) -->
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Projects Section -->
+
+    <!-- @COMPONENT: Testimonials Section -->
+    <section class="py-20 relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold font-poppins mb-6 text-3d">
+                    What Our <span class="text-neon-cyan">Clients Say</span>
+                </h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- @MAP: testimonials.map(testimonial => ( -->
+                <div class="glass-effect p-8 rounded-2xl neon-border card-3d" data-mock="true">
+                    <div class="flex items-center mb-4">
+                        <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+                            <!-- College student testimonial photo -->
+                            <img src="https://pixabay.com/get/g2b11581fcafe317faf43ead97c532f7b33f1356db4a75681477a12f966b5864d0082fe5be286879959efd6d6bc59d6db4e526fea32d4469356b96ba77fcf663e_1280.jpg" 
+                                 alt="Student testimonial" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-neon-cyan">Priya Sharma</h4>
+                            <p class="text-sm text-gray-400">SRMIST Student</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 italic">"Amazing quality work delivered on time. The ML project helped me secure top grades!"</p>
+                    <div class="flex text-neon-pink mt-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="glass-effect p-8 rounded-2xl neon-border card-3d" data-mock="true">
+                    <div class="flex items-center mb-4">
+                        <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+                            <!-- College student testimonial photo -->
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=128&h=128" 
+                                 alt="Student testimonial" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-neon-pink">Raj Kumar</h4>
+                            <p class="text-sm text-gray-400">CSE Student</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 italic">"Professional service with excellent documentation. Highly recommended for final year projects!"</p>
+                    <div class="flex text-neon-green mt-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="glass-effect p-8 rounded-2xl neon-border card-3d" data-mock="true">
+                    <div class="flex items-center mb-4">
+                        <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+                            <!-- College student testimonial photo -->
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=128&h=128" 
+                                 alt="Student testimonial" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-neon-purple">Sneha Patel</h4>
+                            <p class="text-sm text-gray-400">IT Student</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 italic">"Fast delivery and excellent support. The cybersecurity project was exactly what I needed!"</p>
+                    <div class="flex text-neon-cyan mt-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <!-- @END_MAP )) -->
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Testimonials Section -->
+
+    <!-- @COMPONENT: Order Section -->
+    <section id="order" class="py-20 relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold font-poppins mb-6 text-3d">
+                    Order Your <span class="text-neon-green">Project</span>
+                </h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Get started with your custom project today
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="glass-effect p-8 rounded-2xl neon-border">
+                    <form class="space-y-6" data-implementation="Form should validate and send to invinciblehackers07@gmail.com using Nodemailer">
+                        <!-- @STATE: formData:object = {} -->
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-neon-cyan mb-2 font-semibold">Your Name</label>
+                                <input 
+                                    type="text" 
+                                    class="w-full bg-dark-surface border-2 border-gray-700 rounded-lg px-4 py-3 text-white focus:border-neon-cyan transition-colors duration-300" 
+                                    placeholder="Enter your full name"
+                                    data-bind="formData.name"
+                                    required>
+                            </div>
+                            <div>
+                                <label class="block text-neon-pink mb-2 font-semibold">College Name</label>
+                                <input 
+                                    type="text" 
+                                    class="w-full bg-dark-surface border-2 border-gray-700 rounded-lg px-4 py-3 text-white focus:border-neon-pink transition-colors duration-300" 
+                                    placeholder="Your college/university name"
+                                    data-bind="formData.college"
+                                    required>
+                            </div>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-neon-purple mb-2 font-semibold">Project Name</label>
+                                <input 
+                                    type="text" 
+                                    class="w-full bg-dark-surface border-2 border-gray-700 rounded-lg px-4 py-3 text-white focus:border-neon-purple transition-colors duration-300" 
+                                    placeholder="Title of your project"
+                                    data-bind="formData.projectName"
+                                    required>
+                            </div>
+                            <div>
+                                <label class="block text-neon-green mb-2 font-semibold">WhatsApp Number</label>
+                                <input 
+                                    type="tel" 
+                                    class="w-full bg-dark-surface border-2 border-gray-700 rounded-lg px-4 py-3 text-white focus:border-neon-green transition-colors duration-300" 
+                                    placeholder="+91 XXXXX XXXXX"
+                                    data-bind="formData.whatsapp"
+                                    required>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-neon-cyan mb-2 font-semibold">Project Details</label>
+                            <textarea 
+                                rows="5" 
+                                class="w-full bg-dark-surface border-2 border-gray-700 rounded-lg px-4 py-3 text-white focus:border-neon-cyan transition-colors duration-300" 
+                                placeholder="Describe your project requirements, features, and any specific technologies..."
+                                data-bind="formData.details"
+                                required></textarea>
+                        </div>
+                        
+                        <div class="text-center">
+                            <button 
+                                type="submit" 
+                                class="bg-gradient-to-r from-neon-cyan to-neon-green text-black font-bold py-4 px-12 rounded-full text-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl animate-glow"
+                                data-event="click:handleFormSubmit">
+                                Submit Order
+                            </button>
+                        </div>
+                    </form>
+                    
+                    <!-- Delivery Information -->
+                    <div class="mt-12 grid md:grid-cols-2 gap-8">
+                        <div class="text-center p-6 bg-gradient-to-br from-neon-cyan/20 to-neon-blue/20 rounded-xl">
+                            <i class="fas fa-desktop text-4xl text-neon-cyan mb-4"></i>
+                            <h3 class="text-xl font-bold text-neon-cyan mb-2">Online Delivery</h3>
+                            <p class="text-gray-300">Delivered via AnyDesk for remote access and demonstration</p>
+                        </div>
+                        <div class="text-center p-6 bg-gradient-to-br from-neon-pink/20 to-neon-purple/20 rounded-xl">
+                            <i class="fas fa-hand-holding text-4xl text-neon-pink mb-4"></i>
+                            <h3 class="text-xl font-bold text-neon-pink mb-2">Offline Delivery</h3>
+                            <p class="text-gray-300">Available for SRMIST (KTR) campus only. Expanding soon!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: Order Section -->
+
+    <!-- @COMPONENT: Footer -->
+    <footer class="py-12 border-t border-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <div class="text-3xl font-bold font-poppins mb-4 text-3d text-neon-cyan">
+                    Project Xpress
+                </div>
+                <p class="text-gray-400 mb-6">Your future projects start here</p>
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="#home" class="text-gray-400 hover:text-neon-cyan transition-colors duration-300">Home</a>
+                    <a href="#about" class="text-gray-400 hover:text-neon-pink transition-colors duration-300">About</a>
+                    <a href="#projects" class="text-gray-400 hover:text-neon-purple transition-colors duration-300">Projects</a>
+                    <a href="#order" class="text-gray-400 hover:text-neon-green transition-colors duration-300">Order</a>
+                </div>
+                <div class="flex justify-center space-x-6 text-2xl">
+                    <a href="#" class="text-neon-cyan hover:text-neon-pink transition-colors duration-300 transform hover:scale-125">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="text-neon-pink hover:text-neon-purple transition-colors duration-300 transform hover:scale-125">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-neon-purple hover:text-neon-green transition-colors duration-300 transform hover:scale-125">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                <div class="mt-8 pt-8 border-t border-gray-800">
+                    <p class="text-gray-500">&copy; 2024 Project Xpress. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- @END_COMPONENT: Footer -->
+
+    <!-- @COMPONENT: Floating WhatsApp Button -->
+    <a 
+        href="https://chat.whatsapp.com/BHqqZmgDHeg0UTeQ4GE0st" 
+        target="_blank" 
+        class="fixed bottom-8 right-8 z-50 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition-all duration-300 hover:scale-110 animate-glow"
+        style="animation-delay: 0.5s;">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+    <!-- @END_COMPONENT: Floating WhatsApp Button -->
+
+    <script>
+        // TODO: Implement smooth scrolling navigation
+        (function() {
+            // Navigation smooth scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // TODO: Implement form submission with validation and email sending
+            const form = document.querySelector('form');
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    // TODO: Validate form data
+                    // TODO: Send form data to backend endpoint
+                    // TODO: Show animated thank you confirmation
+                    alert('Thank you! Your order has been submitted. We will contact you soon via WhatsApp.');
+                });
+            }
+
+            // TODO: Implement stats counter animation on scroll
+            const observerOptions = {
+                threshold: 0.5,
+                rootMargin: '0px 0px -100px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-fade-in');
+                    }
+                });
+            }, observerOptions);
+
+            // TODO: Add parallax scrolling effects
+            document.querySelectorAll('.stats-counter').forEach(el => {
+                observer.observe(el);
+            });
+        })();
+    </script>
+</body>
+</html>

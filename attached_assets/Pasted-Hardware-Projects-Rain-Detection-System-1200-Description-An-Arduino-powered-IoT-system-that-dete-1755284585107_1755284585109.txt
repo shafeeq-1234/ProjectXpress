@@ -1,0 +1,254 @@
+Hardware Projects
+Rain Detection System
+1200
+Description: An Arduino-powered IoT system that detects rainfall using a rain sensor and sends alerts for timely actions. Ideal for smart irrigation and flood-prevention setups.
+Key Features: Real-time rain detection, automated notifications, IoT-enabled monitoring.
+Outcome: Real-time rain monitoring, automated alerts, and water management optimization.
+Pulse Detection
+1800
+Description: A health-monitoring device that measures heart rate using pulse sensors, displaying results instantly and optionally logging data via IoT.
+Key Features: Instant pulse readings, IoT data logging, wearable integration.
+Outcome: Accurate pulse monitoring, real-time display, and remote health tracking.
+Radar Detection
+1600
+Description: An ultrasonic-sensor-based radar system to detect object distance and movement, displayed on a live radar interface.
+Key Features: Object detection, distance measurement, live visualization.
+Outcome: Object detection, range measurement, and real-time visualization.
+Fish Feeder
+1400
+Description: An automated fish feeding system using Arduino timers or IoT scheduling to dispense food at set intervals.
+Key Features: Scheduled feeding, IoT integration, automated operation.
+Outcome: Timely fish feeding, reduced manual effort, and improved aquarium management.
+Smart Dustbin
+1800
+Description: An ultrasonic-sensor-enabled dustbin that opens automatically when approached, reducing touch-based contamination.
+Key Features: Hands-free operation, sensor detection, hygiene-focused.
+Outcome: Hands-free operation, improved hygiene, and modern waste management.
+RFID Attendance System
+2100
+Description: An Arduino-based attendance tracker where RFID cards record entries and log them to a database for tracking.
+Key Features: Contactless entry, database logging, fast scanning.
+Outcome: Quick, contactless attendance marking and secure data logging.
+Soil, Humidity, Temperature, and Moisture Monitoring
+1800
+Description: A multi-sensor system to measure and log environmental conditions for smart agriculture or greenhouse management.
+Key Features: Multi-sensor data collection, real-time monitoring, IoT-enabled analytics.
+Outcome: Precision farming support, automated irrigation, and real-time data monitoring.
+Solar Energy Monitoring System
+2000
+Description: A solar panel setup with Arduino-based sensors to track energy generation and optimize performance.
+Key Features: Energy generation tracking, performance optimization, IoT integration.
+Outcome: Renewable energy tracking, efficiency optimization, and cost savings.
+
+Fire Alarm
+₹1600
+Description: An automated fire detection system that uses temperature and smoke sensors to identify fire hazards and trigger alarms instantly.
+Key Features: Real-time fire detection, loud buzzer alerts, safety-focused.
+Outcome: Early fire detection, enhanced safety, and reduced property damage risk.
+________________________________________
+ECG Health Monitor
+₹2000
+Description: A portable ECG monitoring device that records heart activity and provides real-time data for health tracking and diagnosis.
+Key Features: Real-time ECG display, heart rate monitoring, health diagnostics support.
+Outcome: Continuous heart health monitoring, early detection of cardiac issues, and improved patient care.
+________________________________________
+
+
+Air Quality Monitoring
+₹2000
+Description: A sensor-based system that measures air quality parameters like PM2.5, CO₂, and temperature to monitor pollution levels.
+Key Features: Real-time air quality index display, pollution alerts, environmental tracking.
+Outcome: Improved awareness of air quality, health risk prevention, and data-driven environmental decisions.
+
+________________________________________
+Digital Image Processing (DIP) Projects
+MICR Code Detection
+Rs 1500
+Description: Processes cheque images to detect and recognize MICR codes using image preprocessing and ML models.
+Key Features: Image preprocessing (grayscale, denoising, binarization), MICR region extraction, character segmentation, SVM/KNN recognition.
+Outcome: Automated MICR extraction, high recognition accuracy, reduced manual errors in banking workflows.
+Face Detection
+Rs 1500
+Description: Automatically identifies and locates human faces in images or video feeds using computer vision and ML.
+Key Features: Real-time detection, AI-based identification, security and attendance applications.
+Outcome: Improves authentication systems, enhances surveillance accuracy, and enables AI-driven features like emotion analysis.
+Color Detection
+Rs 1500
+Description: Recognizes and classifies specific colors within images or video using image processing algorithms.
+Key Features: Multi-color detection, real-time processing, adaptable for robotics and automation.
+Outcome: Supports automated sorting, aids visually impaired users, and assists robotics navigation.
+Image Compression
+Rs 1500
+Description: Reduces the size of image files while retaining visual clarity using lossless or lossy algorithms.
+Key Features: Storage optimization, faster uploads/downloads, adaptable for web and IoT.
+Outcome: Saves storage space, accelerates image transfer, and improves application performance.
+
+Skin Disease Detection
+Rs 1500
+₹2000
+Description: An AI-powered image processing system that analyzes skin images to detect common conditions like acne, rashes, and pigmentation issues.
+Key Features: Automated skin analysis, real-time detection, health-focused.
+Outcome: Early skin condition identification, improved healthcare accessibility, and data-driven diagnosis support.
+Others
+Robofest
+Description: SRMIST’s premier robotics festival showcasing innovation, competitions, and hands-on workshops.
+Key Features: Robotics competitions, workshops, interactive demos, student engagement.
+Outcome: Inspires students, fosters creativity, and highlights SRMIST as a hub for technological excellence.
+
+Text to Handwriting
+Rs 1200
+Description: A browser-based tool converting typed text into realistic handwritten images with customizable fonts, colors, and styles.
+Key Features: Font and ink customization, paper style options, instant rendering.
+Outcome: Enables users to create personalized handwritten notes and letters effortlessly.
+
+Food Waste to Blockchain Donations
+₹2500
+Description: A blockchain-based platform where restaurants and households can log surplus food, allowing NGOs to claim and track deliveries with full transparency.
+Key Features: Real-time food availability logging, secure blockchain-based tracking, NGO matching system.
+Outcome: Reduced food wastage, efficient redistribution to the needy, and transparent donation records.
+
+Personal Carbon Footprint Tracker
+₹2200
+Description: A web and mobile app that tracks daily activities like travel, energy usage, and diet to calculate and display the user’s carbon footprint.
+Key Features: Activity logging, automated carbon emission calculation, eco-friendly recommendations.
+Outcome: Increased environmental awareness, measurable reduction in carbon footprint, and gamified sustainability goals.
+
+Advanced Educational Website
+₹2000
+Description: A modern, interactive e-learning platform with courses, quizzes, and personalized learning paths for students and professionals.
+Key Features: Course library, progress tracking, gamified quizzes, and certificate generation.
+Outcome: Enhanced learning engagement, accessible education for all, and career skill development.
+
+
+
+
+Java Projects
+Hospital Management System
+1800
+Description: Manages patient records, employee information, hospital rooms, departments, login authentication, and ambulance details.
+Key Features: Patient tracking, room allocation, staff management, ambulance scheduling.
+Outcome: Streamlines hospital operations, improves data management, and enhances patient care.
+Airline Management System
+1500
+Description: Manages passenger details, flight information, and bookings in a desktop application.
+Key Features: Login authentication, add/cancel bookings, journey tracking, payment processing.
+Outcome: Streamlines airline operations and enhances booking and passenger tracking efficiency.
+Hotel Management System
+1600
+Description: Manages hotel operations including guest check-in/check-out, room allocation, reservations, billing, and staff management.
+Key Features: Room management, reservation system, billing, staff tracking.
+Outcome: Improves guest service, optimizes room occupancy, and enhances operational efficiency.
+Library Management System
+1500
+Description: Manages books, members, and borrowing/return processes in a library.
+Key Features: Inventory tracking, issue/return logging, fine calculation.
+Outcome: Streamlines library operations, reduces manual errors, and improves service efficiency.
+Bank Management System
+1800
+Description: Manages customer accounts, transactions, deposits, withdrawals, and account information.
+Key Features: Secure login, transaction management, account overview, reporting.
+Outcome: Streamlines banking processes, ensures transaction accuracy, and improves account management.
+                                                                     BIO
+
+Pneumonia Detection using CNN
+1500
+Description: AI system using Convolutional Neural Networks to detect pneumonia from chest X-rays with 95% accuracy. Classifies COVID-19, bacterial, and viral pneumonia for faster, more accurate diagnoses.
+Key Outcomes:
+• 95% accuracy in pneumonia detection.
+• Classification of COVID-19, bacterial, and viral cases.
+• Reduced misdiagnosis risk and faster decision-making.
+What's Included:
+• Preprocessed dataset of 20,000+ X-ray images.
+• CNN-based deep learning model.
+• Training pipeline and evaluation metrics.
+________________________________________
+Drug Repurposing using Knowledge Graph Embeddings
+1500
+Description: Platform using knowledge graph embeddings to identify existing drugs for vector-borne diseases, cutting costs and accelerating discovery.
+Key Features:
+• Comparison of 7 embedding models.
+• Applied to DRKG dataset for 7 diseases.
+• Streamlit app for drug ranking.
+Outcome:
+• Accelerated drug discovery.
+• Systematic model comparison.
+• Data-driven treatment predictions.
+________________________________________
+________________________________________
+MedVision AI
+Description: AI-powered medical imaging platform analyzing X-rays, ultrasounds, CT, and MRI for fast, accurate reports.
+Key Features:
+• Multi-modality AI analysis with confidence scores.
+• Image preprocessing and DICOM support.
+• Professional follow-up integration.
+Outcome:
+• Faster diagnosis, especially in remote areas.
+• Actionable, patient-friendly medical insight
+
+Patient Health Risk Prediction
+₹2500
+Description: An AI-based system that analyzes patient data to predict risks of chronic conditions such as stroke, heart disease, and diabetes. Helps healthcare providers take preventive action.
+Key Features: Data preprocessing, risk prediction model, visual risk reports.
+Outcome: Early disease detection, improved patient care, and reduced healthcare costs.
+________________________________________
+DNA Sequence Alignment Tool
+₹3000
+Description: A bioinformatics tool for comparing DNA sequences to identify genetic similarities, mutations, and evolutionary relationships.
+Key Features: Sequence alignment algorithms, mutation detection, similarity scoring.
+Outcome: Accelerated genetic research, improved disease prediction, and better understanding of genetic relationships.
+
+
+
+                                                               Ecommerce websites
+Reemss Fitness
+Rs 5000
+Description: A modern fitness platform offering workouts, nutrition guidance, and wellness tips for all fitness levels.
+Key Features: Personalized workouts, nutrition plans, progress tracking.
+Outcome: Empowers users to achieve their health goals and build sustainable fitness habits.
+SweetDelights
+Rs 3000
+Description: An online bakery offering freshly baked goods, custom cakes, and treats delivered to customers.
+Key Features: Product catalog, online ordering, Whatsapp toggle chat
+Outcome: Brings convenience and joy to customers with high-quality bakery products.
+Fashion Store
+₹5000
+Description: An e-commerce website for clothing and accessories with an intuitive interface, secure checkout, and personalized product recommendations.
+Key Features: Product catalog with filters, cart & checkout, secure payment gateway.
+Outcome: Streamlined shopping experience, increased customer engagement, and higher sales potential.
+________________________________________
+Electronic Products Store
+₹4000
+Description: An online marketplace for electronics, featuring product comparisons, warranty tracking, and customer reviews.
+Key Features: Product search & filtering, price comparison, secure payments.
+Outcome: Convenient electronics shopping, informed purchase decisions, and improved customer trust.
+________________________________________
+AI Agent Website
+₹5000
+Description: A web platform hosting an AI-powered virtual assistant for answering queries, automating workflows, and providing personalized suggestions.
+Key Features: Chatbot integration, natural language processing, task automation.
+Outcome: Enhanced customer support, faster responses, and improved operational efficiency.
+
+
+                                                                Mobile Apps
+
+
+Mood Sync
+3500
+Description: A responsive web app promoting emotional wellness by tracking moods and correlating them with biometric health data.
+Key Features: Real-time mood logging, biometric integration (Google Fit/Fitbit), visual trend analysis.
+Outcome: Enhances self-awareness, helps understand emotional trends, and prepares for AI-driven mood prediction.
+
+Personal Habit Tracker App
+₹3000
+Description: A mobile app that helps users build and maintain positive habits with reminders, progress tracking, and streak rewards.
+Key Features: Habit creation, daily reminders, streak tracking, progress charts.
+Outcome: Improved productivity, better time management, and consistent personal growth.
+________________________________________
+Community App
+₹4500
+Description: A platform for like-minded individuals to connect, share updates, and collaborate through groups and discussion boards.
+Key Features: User profiles, group creation, posts & comments, private messaging.
+Outcome: Enhanced social engagement, knowledge sharing, and stronger community bonds.
+________________________________________
+
+

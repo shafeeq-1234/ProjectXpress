@@ -1,0 +1,9 @@
+node_modules
+.env
+.env.local
+.env.production.local
+.git
+server/vite.ts
+attached_assets
+*.log
+dist/index.js

@@ -1,0 +1,221 @@
+                                                                                   DBMS
+
+Property Management System
+₹1200 DBMS
+Complete property management platform for administrators, owners, tenants, and employees with role-specific features for efficient building operations.
+Key Features
+•	Admin, Owner, Tenant, and Employee Dashboards
+•	Parking Slot Allocation
+•	Maintenance Fee Management
+•	Complaint Management
+What’s Included
+•	Complete Source Code
+•	Database Design
+•	User Documentation
+•	Installation Guide
+
+EB Bill Management System
+₹1500 DBMS
+Complete electricity billing system for managing consumer details, calculating bills, and tracking payment status with ease.
+Key Features
+•	Consumer Registration & Management
+•	Automatic Bill Calculation
+•	Payment Tracking & History
+•	Bill Report Generation
+What’s Included
+•	Complete Source Code
+•	Database Design
+•	User Documentation
+
+Stadium Management System
+₹1500 DBMS
+A ticket booking and management system for stadium events, enabling seat reservations, match scheduling, and customer record maintenance.
+Key Features
+•	Customer Ticket Booking
+•	Seat Number Allocation
+•	Match Date & Price Management
+•	View All Bookings with Details
+•	Easy Data Entry & Validation
+What’s Included
+•	Complete Source Code
+•	Database Design
+•	User Documentation
+
+Insurance Management System
+₹1500 DBMS
+A complete insurance policy management platform for administrators and customers, enabling policy creation, approval workflows, and customer query handling.
+Key Features
+•	Manage Registered Users & Policies
+•	Policy Categories Management
+•	Policy Application & Approval System
+•	Track Approved, Disapproved, and Pending Policy Holders
+•	Customer Query Management
+What’s Included
+•	Complete Source Code
+•	Database Design
+•	User Documentation
+
+
+E-Commerce Management System
+₹1400 DBMS
+A complete online shopping platform enabling customers to browse, add to cart, place orders, and make payments, while admins can manage products, categories, users, and orders efficiently.
+Key Features
+•	User Registration & Login
+•	Add to Cart & Update/Delete Cart Items
+•	Order Placement & Payment Processing
+•	Admin CRUD Operations for Products, Categories, Users, and Orders
+•	Secure User & Admin Access Control
+What’s Included
+•	Complete Source Code
+•	Database Design
+•	User Documentation
+
+
+Waste Management System
+₹1200 DBMS
+A comprehensive waste collection and recycling platform developed in Python and Django, designed to enhance efficiency, accountability, and environmental sustainability through a centralized database, user engagement programs, and performance tracking.
+Key Features
+•	User Registration for Customers, Collectors, and Administrators
+•	Rewards Program for Recycling Contributions
+•	Facility Location & Capacity Management
+•	Collector Performance Evaluation & Metrics
+•	User Feedback & Rating System
+What’s Included
+•	Complete Source Code
+•	Database Design
+•	User Documentation
+
+
+Café Management System
+₹1500 DBMS
+A Flask-based café management platform for handling menu items, processing orders, and organizing categories with MySQL backend support.
+Key Features
+•	Menu Management (Add, Edit, Delete Items)
+•	Order Placement & Status Tracking
+•	Mark Orders as Completed or Cancelled
+•	Category-based Menu Organization
+What’s Included
+•	Complete Source Code
+•	Database Design
+•	User Documentation
+
+Job Management System
+₹1500 DBMS
+An online recruitment platform developed using Flask and MySQL that connects job seekers with companies, enabling smooth job applications, profile management, and interview tracking.
+Key Features
+•	Job Seeker Registration & Login
+•	Create, Update, and Manage Academic Profile
+•	Resume Upload & Management
+•	Search and Apply for Multiple Job Vacancies
+•	View Applied Jobs with Details
+•	Interview Scheduling & Result Status Updates
+•	Account Details & Summary
+What’s Included
+•	Complete Source Code
+•	Database Design
+•	User Documentation
+
+Event Management System
+₹1400 DBMS
+A Streamlit-based platform integrated with MySQL to manage all aspects of event organization, including attendees, hosts, suppliers, bills, and event scheduling. Designed for both small and large-scale event operations.
+Key Features
+•	Manage Events (Name, Type, Dates, Venue, Timings)
+•	Host Management with Contact Details
+•	Supplier Management & Departmental Allocation
+•	Bill Tracking with Payment Status
+•	Attendee Registration & Event Participation Tracking
+•	Custom SQL Query Execution for Data Analysis
+What’s Included
+•	Complete Source Code
+•	Database Schema & Relationships
+•	User Documentation
+
+Movie Management System
+₹2000 DBMS
+A full-stack movie booking platform powered by MySQL, enabling secure user management, real-time seat booking, and complete admin control. Incorporates advanced SQL features like views, triggers, and stored procedures for optimized performance.
+Key Features
+•	Secure User Registration, Login, and Role-based Access
+•	Manage Movies, Actors, Genres, and Bookings
+•	Real-time Seat Availability with Overbooking Prevention
+•	Admin Panel for CRUD Operations on All Entities
+•	Advanced SQL Implementation (Views, Triggers, Stored Procedures)
+What’s Included
+•	Complete Source Code
+•	Database Design & SQL Scripts
+•	User Documentation
+
+Human Resource Management System (HRMS)
+₹1500 DBMS
+A robust employee and department management platform designed using MySQL, applying functional dependency and normalization principles to ensure an optimized and well-structured database.
+Key Features
+•	Employee Management (Profile, Department, Account Status)
+•	Department Management with Manager and Project Assignment
+•	Leave Application & Approval System
+•	Status Updates for Employee Work Departments
+•	Secure Admin Access and Control
+What’s Included
+•	Complete Source Code
+•	Database Design with Functional Dependencies & 3NF Schema
+•	User Documentation
+
+
+________________________________________
+IPL Management System
+₹1800 DBMS
+A complete IPL database solution built using MySQL for efficient management of teams, players, matches, and tournament statistics. The project follows database normalization and ensures accurate, secure, and scalable data handling for the entire league.
+Key Features
+•	Team & Player Management (Teams, Owners, Sponsors, Head Coach, Contracts)
+•	Match Scheduling & Results Tracking (Matches, Stadium, Umpires)
+•	Performance Statistics (Runs Stats, Purple Cap, Orange Cap, Player Stats)
+•	League & Sponsorship Management (IPL Committee, League Sponsor, Team Sponsor)
+•	Ticket Management System for Matches
+What’s Included
+•	Complete Source Code
+•	MySQL Database with Fully Normalized Schema
+•	Entity-Relationship Diagram (ERD)
+•	User Documentation
+
+
+University Management System
+₹1500 DBMS
+A Flask-powered university portal with MySQL backend, designed to simplify student and administrative workflows. The system provides role-based dashboards for students and admins, enabling efficient profile management, course handling, and institutional record-keeping.
+Key Features
+•	Student Dashboard — View profile, enrolled courses, and academic details
+•	Admin Dashboard — Manage student records, courses, and administrative data
+•	Course Management — Add, update, and delete course information
+•	Role-Based Access — Secure login for both students and administrators
+•	Responsive UI for smooth navigation across devices
+What’s Included
+•	Complete Source Code
+•	MySQL Database with Normalized Schema
+•	Entity-Relationship Diagram (ERD)
+•	User Documentation
+
+Online Exam System
+A web-based platform for conducting secure online examinations with dedicated student and admin sections.
+Rs 1500
+Key Features:
+•	Secure student login and profile access
+•	Rules & regulations display before exams
+•	System compatibility check and face input collection
+•	Real-time exam interface with automated scoring
+•	Instant result viewing for students
+•	Admin tools for student record management and result monitoring
+What’s Included:
+•	Student dashboard (login, rules, compatibility check, exam, results)
+•	Admin dashboard (student CRUD, result review)
+
+Music Streaming System
+An interactive online platform for streaming, organizing, and managing your favorite music with a personalized library.
+Rs 1500
+Key Features:
+•	User authentication and personalized library
+•	Browse and search for songs, artists, and albums
+•	Create and manage playlists
+•	Track listening history
+•	Built-in music player with play, pause, skip, and volume control
+What’s Included:
+•	User dashboard (songs, artists, albums view)
+•	Playlist management module
+•	History tracking module
+•	Music player interface
